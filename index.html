@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sera 中文开发文档</title>
+<style>
+:root{--bg:#fbfbfa;--fg:#1b1b19;--dim:#6b6b66;--line:#e5e4e0;--card:#fff;--accent:#0f7b52}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0e10;--fg:#e9e9e6;--dim:#8b8b85;--line:#26272b;--card:#141518;--accent:#4ade80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);padding:48px 20px;
+font:16px/1.75 ui-sans-serif,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.w{max-width:720px;margin:0 auto}
+h1{font-size:28px;margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--dim);margin-bottom:32px}
+a{color:var(--accent)}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:16px 18px;margin-bottom:12px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card b{display:block;font-size:17px;margin-bottom:2px}
+.card span{color:var(--dim);font-size:14px}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:14px}
+.note{color:var(--dim);font-size:14px;margin-top:32px;border-top:1px solid var(--line);padding-top:20px}
+</style></head><body><div class="w">
+<h1>Sera 中文开发文档</h1>
+<p class="sub">官方文档只有英文，这里是补上的那一份。所有数据都实测过并标了日期。</p>
+<a class="card" href="docs/quickstart.md"><b>快速开始</b><span>三分钟问到第一个跨币种报价，不用任何凭证</span></a>
+<a class="card" href="docs/quote-api.md"><b>报价接口详解</b><span>公开文档里没有的 <code>/swap/quote</code> 完整请求格式</span></a>
+<a class="card" href="docs/glossary.md"><b>术语表</b><span>中文里该怎么讲，翻译不对读者第一句就走了</span></a>
+<a class="card" href="docs/troubleshooting.md"><b>常见错误</b><span>422、no_liquidity、报价返 0 分别是什么意思</span></a>
+<p class="note"><code>POST /swap/quote</code> 是完全公开的接口，不用 key、不用注册、不用私钥。
+但它的请求体格式没写在公开文档里，只存在于 <code>sera-mcp</code> 的类型定义中 ——
+这就是这个仓库存在的原因。</p>
+</div></body></html>
